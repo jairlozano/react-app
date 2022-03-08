@@ -26,7 +26,7 @@ jobs:
       - run: npm test -- --coverage
         env:
           CI: true
-      - name: Upload Test Coverage 
+      - name: Upload Test Coverage
         uses: actions/upload-artifact@v1
         with:
           name: code-coverage
@@ -34,7 +34,7 @@ jobs:
       - name: Build Project
         if: github.event_name == 'push'
         run: npm run build
-      - name: Upload Build folder 
+      - name: Upload Build folder
         uses: actions/upload-artifact@v1
         with:
           name: build
